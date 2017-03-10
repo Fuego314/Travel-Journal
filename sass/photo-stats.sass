@@ -1,0 +1,91 @@
+.photo-stats,
+.like,
+.comments,
+.share
+	display: flex
+
+.photo-stats
+	justify-content: space-between
+	margin: 1.5em 0
+.show-more-info
+	cursor: pointer
+.like-icon,
+.comments-icon,
+.share-icon
+	width: 1em
+	height: 1em
+	margin-right: .6em
+	cursor: pointer
+.stats-text
+	display: inline-block
+	margin-top: 0
+	margin-bottom: 0
+	padding-top: 1px
+.like-icon
+	background: url('../images/like.svg')
+	background-size: cover
+.like-icon.liked
+	background-position: 58px
+.share
+	position: relative
+.share-links
+	position: absolute
+	display: flex
+	flex-direction: row
+	justify-content: space-around
+	align-items: center
+	top: 30px
+	right: 39px
+	width: 155px
+	height: 37px
+	padding: 0 4px
+	background: #fff
+	border: 1px solid #a4a6ab
+	border-radius: 4px
+	box-shadow: 1px 1px 1px 1px rgba(164, 166, 171, .6)
+	opacity: 0
+	z-index: 10
+	transition: .3s all
+	&:before,
+	&:after
+		position: absolute
+		content: " "
+		width: 0
+		height: 0
+		left: 84%
+		bottom: 100%
+		border: solid transparent
+		pointer-events: none
+	&:after
+		border-color: rgba(255, 255, 255, 0)
+		border-bottom-color: #fff
+		border-width: 10px
+		margin-left: -10px
+	&:before
+		border-color: rgba(255, 225, 255, 0)
+		border-bottom-color: #a4a6ab
+		border-width: 12px
+		margin-left: -12px
+.share-icons,
+.close-share
+	cursor: pointer
+.share-icons
+	width: 25px
+	height: 25px
+	background-image: url('../images/share-icons.svg')
+	background-size: cover
+	&:nth-child(1)
+		margin-left: 1em
+	&:nth-child(2)
+		background-position: 75px
+	&:nth-child(3)
+		background-position: 50px
+	&:nth-child(4)
+		background-position: 25px
+.close-share
+	position: absolute
+	top: 4px
+	left: 4px
+	width: .9em
+.share-links.show-links
+	opacity: 1
